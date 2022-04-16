@@ -6,7 +6,7 @@ part 'example_event.dart';
 part 'example_state.dart';
 
 class ExampleBloc extends Bloc<ExampleEvent, ExampleState> {
-  ExampleBloc() : super(ExampleInitial()) {
+  ExampleBloc() : super(ExampleStateInitial()) {
     on<ExampleFindNameEvent>(_findNames);
   }
 
