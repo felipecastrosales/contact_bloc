@@ -16,6 +16,16 @@ class BlocExamplePage extends StatelessWidget {
         title: const Text('BlocPage'),
       ),
       body: BlocListener<ExampleBloc, ExampleState>(
+        bloc: ExampleBloc(),
+        listenWhen: (previous, current) {
+          if (previous is ExampleStateInitial && current is ExampleStateData) {
+            if (current.names.length > 2) {
+              return true;
+            }
+          }
+          return false;
+          // return current is ExampleStateData;
+        },
         listener: (context, state) {
           developer.log('state change}');
           if (state is ExampleStateData) {
@@ -27,6 +37,15 @@ class BlocExamplePage extends StatelessWidget {
         child: Column(
           children: [
             BlocConsumer<ExampleBloc, ExampleState>(
+              buildWhen: (previous, current) {
+                if (previous is ExampleStateInitial &&
+                    current is ExampleStateData) {
+                  if (current.names.length > 1) {
+                    return true;
+                  }
+                }
+                return false;
+              },
               listener: (context, state) {
                 developer.log('state change to ${state.runtimeType}');
               },
