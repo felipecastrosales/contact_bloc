@@ -12,7 +12,7 @@ class BlocExamplePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(  
+      appBar: AppBar(
         title: const Text('BlocPage'),
       ),
       body: BlocListener<ExampleBloc, ExampleState>(
@@ -55,22 +55,27 @@ class BlocExamplePage extends StatelessWidget {
                 return const SizedBox.shrink();
               },
             ),
-            BlocBuilder<ExampleBloc, ExampleState>(
-              builder: (context, state) {
-                developer.log('${state.runtimeType}', name: 'runtimeType');
+            BlocSelector<ExampleBloc, ExampleState, List<String>>(
+              selector: (state) {
                 if (state is ExampleStateData) {
-                  return ListView.builder(
-                    shrinkWrap: true,
-                    itemCount: state.names.length,
-                    itemBuilder: (context, index) {
-                      return ListTile(
-                        title: Text(state.names[index]),
-                      );
-                    },
-                  );
-                } else {
-                  return const SizedBox.shrink();
+                  return state.names;
                 }
+                return const [];
+              },
+              builder: (context, names) {
+                developer.log(
+                  '${names.runtimeType}',
+                  name: 'names runtimeType',
+                );
+                return ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: names.length,
+                  itemBuilder: (context, index) {
+                    return ListTile(
+                      title: Text(names[index]),
+                    );
+                  },
+                );
               },
             ),
           ],
