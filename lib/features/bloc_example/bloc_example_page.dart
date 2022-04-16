@@ -34,76 +34,86 @@ class BlocExamplePage extends StatelessWidget {
             );
           }
         },
-        child: Column(
-          children: [
-            BlocConsumer<ExampleBloc, ExampleState>(
-              buildWhen: (previous, current) {
-                if (previous is ExampleStateInitial &&
-                    current is ExampleStateData) {
-                  if (current.names.length > 1) {
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              BlocConsumer<ExampleBloc, ExampleState>(
+                buildWhen: (previous, current) {
+                  // ignore: unnecessary_type_check
+                  if (previous is ExampleState && current is ExampleStateData) {
+                    if (current.names.length > 1) {
+                      return true;
+                    }
+                  }
+                  return false;
+                },
+                listener: (context, state) {
+                  developer.log('state change to ${state.runtimeType}');
+                },
+                builder: (_, state) {
+                  if (state is ExampleStateData) {
+                    return Text('Quantity is: ${state.names.length}');
+                  }
+                  return const SizedBox.shrink();
+                },
+              ),
+              BlocSelector<ExampleBloc, ExampleState, bool>(
+                selector: (state) {
+                  if (state is ExampleStateInitial) {
                     return true;
                   }
-                }
-                return false;
-              },
-              listener: (context, state) {
-                developer.log('state change to ${state.runtimeType}');
-              },
-              builder: (_, state) {
-                if (state is ExampleStateData) {
-                  return Text('Quantity is: ${state.names.length}');
-                }
-                return const SizedBox.shrink();
-              },
-            ),
-            BlocSelector<ExampleBloc, ExampleState, bool>(
-              selector: (state) {
-                if (state is ExampleStateInitial) {
-                  return true;
-                }
-                return false;
-              },
-              builder: (context, showLoader) {
-                if (showLoader) {
-                  return const Expanded(
-                    child: Center(
-                      child: CircularProgressIndicator(),
-                    ),
-                  );
-                }
-                return const SizedBox.shrink();
-              },
-            ),
-            BlocSelector<ExampleBloc, ExampleState, List<String>>(
-              selector: (state) {
-                if (state is ExampleStateData) {
-                  return state.names;
-                }
-                return const [];
-              },
-              builder: (context, names) {
-                developer.log(
-                  '${names.runtimeType}',
-                  name: 'names runtimeType',
-                );
-                return ListView.builder(
-                  shrinkWrap: true,
-                  itemCount: names.length,
-                  itemBuilder: (context, index) {
-                    return ListTile(
-                      onTap: () {
-                        BlocProvider.of<ExampleBloc>(context).add(
-                          ExampleRemoveNameEvent(name: names[index]),
-                        );
-                      },
-                      title: Text(names[index]),
+                  return false;
+                },
+                builder: (context, showLoader) {
+                  if (showLoader) {
+                    return const Expanded(
+                      child: Center(
+                        child: CircularProgressIndicator(),
+                      ),
                     );
-                  },
-                );
-              },
-            ),
-          ],
+                  }
+                  return const SizedBox.shrink();
+                },
+              ),
+              BlocSelector<ExampleBloc, ExampleState, List<String>>(
+                selector: (state) {
+                  if (state is ExampleStateData) {
+                    return state.names;
+                  }
+                  return const [];
+                },
+                builder: (context, names) {
+                  developer.log(
+                    '${names.runtimeType}',
+                    name: 'names runtimeType',
+                  );
+                  return ListView.builder(
+                    shrinkWrap: true,
+                    itemCount: names.length,
+                    itemBuilder: (context, index) {
+                      return ListTile(
+                        onTap: () {
+                          BlocProvider.of<ExampleBloc>(context).add(
+                            ExampleRemoveNameEvent(name: names[index]),
+                          );
+                        },
+                        title: Text(names[index]),
+                      );
+                    },
+                  );
+                },
+              ),
+            ],
+          ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          BlocProvider.of<ExampleBloc>(context).add(
+            ExampleAddNameEvent(name: 'Challenge'),
+          );
+        },
+        child: const Icon(Icons.add),
       ),
     );
   }
