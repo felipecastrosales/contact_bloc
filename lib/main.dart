@@ -5,6 +5,7 @@ import 'features/bloc_example/bloc/example_bloc.dart';
 import 'features/bloc_example/bloc_example_page.dart';
 import 'features/bloc_example/bloc_freezed/example_freezed_bloc.dart';
 import 'features/bloc_example/bloc_freezed_example_page.dart';
+import 'features/contacts/contacts_list/bloc/contact_list_bloc.dart';
 import 'features/contacts/contacts_list/contacts_list_page.dart';
 import 'home/home_page.dart';
 
@@ -29,8 +30,11 @@ class MyApp extends StatelessWidget {
         '/bloc/example/freezed': (context) => BlocProvider(
             create: (context) => ExampleFreezedBloc()
               ..add(const ExampleFreezedEvent.findNames()),
-            child: const BlocFreezedExamplePage()), // BlocProv
-        '/contacts/list': (context) => const ContactsListPage(), // BlocProvider
+            child: const BlocFreezedExamplePage()),
+        '/contacts/list': (context) => BlocProvider(
+              create: (_) => ContactListBloc(),
+              child: const ContactsListPage(),
+            ),
       },
     );
   }
