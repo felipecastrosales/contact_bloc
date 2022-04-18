@@ -5,4 +5,5 @@ class ExampleFreezedState with _$ExampleFreezedState {
   factory ExampleFreezedState.initial() = _ExampleFreezedStateInitial;
   factory ExampleFreezedState.data({required List<String> names}) =
       _ExampleFreezedStateData;
+  factory ExampleFreezedState.loading() = _ExampleFreezedStateLoading;
 }

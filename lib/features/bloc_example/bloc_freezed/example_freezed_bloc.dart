@@ -25,13 +25,14 @@ class ExampleFreezedBloc
     );
     final newNames = [...names];
     newNames.add(event.name);
-    emit(ExampleFreezedState.data(names: names));
+    emit(ExampleFreezedState.data(names: newNames));
   }
 
   FutureOr<void> _findNames(
     _ExampleFreezedEventFindNames event,
     Emitter<ExampleFreezedState> emit,
   ) async {
+    emit(ExampleFreezedState.loading());
     final names = ['John', 'Jane', 'Jack'];
     await Future.delayed(const Duration(seconds: 3));
     emit(ExampleFreezedState.data(names: names));
