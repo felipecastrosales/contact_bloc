@@ -8,6 +8,7 @@ import 'features/bloc_example/bloc_freezed_example_page.dart';
 import 'features/contacts/contacts_list/bloc/contact_list_bloc.dart';
 import 'features/contacts/contacts_list/contacts_list_page.dart';
 import 'home/home_page.dart';
+import 'repositories/contact_repository.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,24 +19,31 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Contact',
-      initialRoute: '/home',
-      routes: {
-        '/home': (context) => const HomePage(),
-        '/bloc/example/': (context) => BlocProvider(
-              create: (_) => ExampleBloc()..add(ExampleFindNameEvent()),
-              child: const BlocExamplePage(),
-            ),
-        '/bloc/example/freezed': (context) => BlocProvider(
-            create: (context) => ExampleFreezedBloc()
-              ..add(const ExampleFreezedEvent.findNames()),
-            child: const BlocFreezedExamplePage()),
-        '/contacts/list': (context) => BlocProvider(
-              create: (_) => ContactListBloc(),
-              child: const ContactsListPage(),
-            ),
-      },
+    return RepositoryProvider(
+      create: (_) => ContactRepository(),
+      child: MaterialApp(
+        title: 'Contact',
+        initialRoute: '/home',
+        routes: {
+          '/home': (context) => const HomePage(),
+          '/bloc/example/': (context) => BlocProvider(
+                create: (_) => ExampleBloc()..add(ExampleFindNameEvent()),
+                child: const BlocExamplePage(),
+              ),
+          '/bloc/example/freezed': (context) => BlocProvider(
+              create: (context) => ExampleFreezedBloc()
+                ..add(const ExampleFreezedEvent.findNames()),
+              child: const BlocFreezedExamplePage()),
+          '/contacts/list': (context) => BlocProvider(
+                create: (_) => ContactListBloc(
+                    repository: context.read<ContactRepository>())
+                  ..add(
+                    const ContactListEvent.findAll(),
+                  ),
+                child: const ContactsListPage(),
+              ),
+        },
+      ),
     );
   }
 }

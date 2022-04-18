@@ -6,7 +6,7 @@ class ContactRepository {
     final response = await Dio().get('http://10.0.2.2:3031/contacts');
     return response.data
         ?.map<Contact>((contact) => Contact.fromMap(contact))
-        .tolist();
+        .toList();
   }
 
   Future<void> create(Contact model) => Dio().post(
@@ -15,10 +15,10 @@ class ContactRepository {
       );
 
   Future<void> update(Contact model) => Dio().put(
-        'http://10.e.2.2:3031/contacts/${model.id}',
+        'http://10.0.2.2:3031/contacts/${model.id}',
         data: model.toMap(),
       );
 
   Future<void> delete(Contact model) =>
-      Dio().delete('http://18.0.2.2:3031/contacts/${model.id}');
+      Dio().delete('http://10.0.2.2:3031/contacts/${model.id}');
 }
