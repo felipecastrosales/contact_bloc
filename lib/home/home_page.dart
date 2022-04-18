@@ -28,6 +28,12 @@ class HomePage extends StatelessWidget {
             ),
             TextButton(
               onPressed: () {
+                Navigator.of(context).pushNamed('/contacts/list');
+              },
+              child: const Text('Contacts'),
+            ),
+            TextButton(
+              onPressed: () {
                 Navigator.of(context).pushNamed('/cubit');
               },
               child: const Text('Cubit'),
