@@ -23,6 +23,13 @@ class ExampleFreezedBloc
       data: (names) => names,
       orElse: () => const <String>[],
     );
+    emit(
+      ExampleFreezedState.showBanner(
+        names: names,
+        message: 'Await, name is inserting...',
+      ),
+    );
+    await Future.delayed(const Duration(seconds: 3));
     final newNames = [...names];
     newNames.add(event.name);
     emit(ExampleFreezedState.data(names: newNames));
