@@ -55,6 +55,6 @@ class ExampleFreezedBloc
     );
     final newNames = [...names];
     newNames.retainWhere((element) => element != event.name);
-    emit(ExampleFreezedState.data(names: names));
+    emit(ExampleFreezedState.data(names: newNames));
   }
 }
