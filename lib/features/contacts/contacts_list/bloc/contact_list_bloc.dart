@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:developer' as developer;
 
 import 'package:bloc/bloc.dart';
 import 'package:contact_bloc/models/contact.dart';
@@ -22,7 +23,18 @@ class ContactListBloc extends Bloc<ContactListEvent, ContactListState> {
     _ContactListEventFindAll event,
     Emitter<ContactListState> emit,
   ) async {
-    final contacts = await _repository.findAll();
-    emit(ContactListState.data(contacts: contacts));
+    try {
+      emit(const ContactListState.loading());
+      final contacts = await _repository.findAll();
+      emit(ContactListState.data(contacts: contacts));
+      throw Exception();
+    } catch (e, s) {
+      developer.log(
+        'Error to load contacts',
+        error: e.toString(),
+        stackTrace: s,
+      );
+      emit(const ContactListState.error(error: 'Error to load contacts'));
+    }
   }
 }
