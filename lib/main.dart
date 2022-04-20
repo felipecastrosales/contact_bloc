@@ -5,6 +5,8 @@ import 'features/bloc_example/bloc/example_bloc.dart';
 import 'features/bloc_example/bloc_example_page.dart';
 import 'features/bloc_example/bloc_freezed/example_freezed_bloc.dart';
 import 'features/bloc_example/bloc_freezed_example_page.dart';
+import 'features/contacts/contact_register/contact_register_page.dart';
+import 'features/contacts/contact_update/contact_update_page.dart';
 import 'features/contacts/contacts_list/bloc/contact_list_bloc.dart';
 import 'features/contacts/contacts_list/contacts_list_page.dart';
 import 'home/home_page.dart';
@@ -42,6 +44,8 @@ class MyApp extends StatelessWidget {
                   ),
                 child: const ContactsListPage(),
               ),
+          '/contacts/register': (context) => const ContactRegisterPage(),
+          '/contacts/update': (context) => const ContactUpdatePage(),
         },
       ),
     );

@@ -27,7 +27,6 @@ class ContactListBloc extends Bloc<ContactListEvent, ContactListState> {
       emit(const ContactListState.loading());
       final contacts = await _repository.findAll();
       emit(ContactListState.data(contacts: contacts));
-      throw Exception();
     } catch (e, s) {
       developer.log(
         'Error to load contacts',
