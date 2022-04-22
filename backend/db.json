@@ -1,9 +1,1 @@
-{
-    "contacts": [
-        {
-            "id": "asdnadfjnrfsdkm",
-            "name": "Felipe Sales",
-            "email": "soufeliposales@gmail.com"
-        }
-    ]
-}
+{"contacts":[{"id":"asdnadfjnrfsdkm","name":"Felipe Sales","email":"soufeliposales@gmail.com"},{"id":"cd894ea0-c1d7-11ec-afbf-890dbe4d4e65","name":"tes","email":"soufeliposales@gmail.com"},{"id":"ce77f460-c1d7-11ec-afbf-890dbe4d4e65","name":"tes","email":"soufeliposales@gmail.com"},{"id":"fce888f0-c1d7-11ec-afbf-890dbe4d4e65","name":"tes","email":"soufeliposales@gmail.com"}]}

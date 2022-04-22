@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'bloc/contact_register_bloc.dart';
 
 class ContactRegisterPage extends StatefulWidget {
   const ContactRegisterPage({Key? key}) : super(key: key);
@@ -43,7 +46,7 @@ class _ContactRegisterPageState extends State<ContactRegisterPage> {
               },
             ),
             TextFormField(
-              controller: _nameEC,
+              controller: _emailEC,
               decoration: const InputDecoration(
                 label: Text('email'),
               ),
@@ -55,9 +58,19 @@ class _ContactRegisterPageState extends State<ContactRegisterPage> {
               },
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                final isFormValid = _formkey.currentState?.validate() ?? false;
+                if (isFormValid) {
+                  context.read<ContactRegisterBloc>().add(
+                        ContactRegisterEvent.save(
+                          name: _nameEC.text,
+                          email: _emailEC.text,
+                        ),
+                      );
+                }
+              },
               child: const Text('Salvar'),
-            ), // ElevatedButton
+            ),
           ],
         ),
       ),
