@@ -18,11 +18,11 @@ class ContactListCubit extends Cubit<ContactListState> {
     try {
       emit(const ContactListState.loading());
       final contacts = await _repository.findAll();
-      await Future.delayed(const Duration(seconds: 3));
+      //await Future.delayed(const Duration(seconds: 3));
       emit(ContactListState.data(contacts: contacts));
     } catch (e, s) {
       developer.log('Erro ao buscar contatos', error: e, stackTrace: s);
-      emit(const ContactListState.error(message: 'Error to search contacts'));
+      emit(const ContactListState.error(message: 'Error to load contacts'));
     }
   }
 
