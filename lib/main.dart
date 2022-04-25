@@ -11,6 +11,7 @@ import 'features/contacts/contact_update/bloc/contact_update_bloc.dart';
 import 'features/contacts/contact_update/contact_update_page.dart';
 import 'features/contacts/contacts_list/bloc/contact_list_bloc.dart';
 import 'features/contacts/contacts_list/contacts_list_page.dart';
+import 'features/contacts_cubit/list/contacts_list_cubit_page.dart';
 import 'home/home_page.dart';
 import 'models/contact.dart';
 import 'repositories/contact_repository.dart';
@@ -61,6 +62,14 @@ class MyApp extends StatelessWidget {
                 contactsRepository: context.read(),
               ),
               child: ContactUpdatePage(contact: contact),
+            );
+          },
+          '/cubit/list': (context) {
+            return BlocProvider(
+              create: (context) => ContactListBloc(
+                repository: context.read()..findAll(),
+              ),
+              child: const ContactsListCubitPage(),
             );
           },
         },
