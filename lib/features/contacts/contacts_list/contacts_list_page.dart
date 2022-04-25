@@ -62,17 +62,26 @@ class ContactsListPage extends StatelessWidget {
                           orElse: () => const [],
                         );
                       },
-                      builder: (context, state) {
+                      builder: (_, contacts) {
                         return ListView.builder(
                           shrinkWrap: true,
                           physics: const NeverScrollableScrollPhysics(),
-                          itemCount: state.length,
+                          itemCount: contacts.length,
                           itemBuilder: (context, index) {
+                            final contact = contacts[index];
                             return ListTile(
-                              title: Text(state[index].name),
-                              subtitle: Text(state[index].email),
-                              onTap: () => Navigator.pushNamed(
-                                  context, '/contacts/update'),
+                              title: Text(contact.name),
+                              subtitle: Text(contact.email),
+                              onTap: () async {
+                                await Navigator.pushNamed(
+                                  context,
+                                  '/contacts/update',
+                                  arguments: contact,
+                                );
+                                context.read<ContactListBloc>().add(
+                                      const ContactListEvent.findAll(),
+                                    );
+                              },
                             );
                           },
                         );

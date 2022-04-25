@@ -7,10 +7,12 @@ import 'features/bloc_example/bloc_freezed/example_freezed_bloc.dart';
 import 'features/bloc_example/bloc_freezed_example_page.dart';
 import 'features/contacts/contact_register/bloc/contact_register_bloc.dart';
 import 'features/contacts/contact_register/contact_register_page.dart';
+import 'features/contacts/contact_update/bloc/contact_update_bloc.dart';
 import 'features/contacts/contact_update/contact_update_page.dart';
 import 'features/contacts/contacts_list/bloc/contact_list_bloc.dart';
 import 'features/contacts/contacts_list/contacts_list_page.dart';
 import 'home/home_page.dart';
+import 'models/contact.dart';
 import 'repositories/contact_repository.dart';
 
 void main() {
@@ -51,7 +53,16 @@ class MyApp extends StatelessWidget {
                 ),
                 child: const ContactRegisterPage(),
               ),
-          '/contacts/update': (context) => const ContactUpdatePage(),
+          '/contacts/update': (context) {
+            final contact =
+                ModalRoute.of(context)!.settings.arguments as Contact;
+            return BlocProvider(
+              create: (context) => ContactUpdateBloc(
+                contactsRepository: context.read(),
+              ),
+              child: ContactUpdatePage(contact: contact),
+            );
+          },
         },
       ),
     );
