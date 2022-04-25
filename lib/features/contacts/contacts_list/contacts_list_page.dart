@@ -72,6 +72,11 @@ class ContactsListPage extends StatelessWidget {
                             return ListTile(
                               title: Text(contact.name),
                               subtitle: Text(contact.email),
+                              onLongPress: () async {
+                                context.read<ContactListBloc>().add(
+                                      ContactListEvent.delete(model: contact),
+                                    );
+                              },
                               onTap: () async {
                                 await Navigator.pushNamed(
                                   context,
