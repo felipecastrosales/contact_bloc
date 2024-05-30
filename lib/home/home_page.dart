@@ -16,25 +16,25 @@ class HomePage extends StatelessWidget {
           children: [
             TextButton(
               onPressed: () {
-                Navigator.of(context).pushNamed('bloc/example/');
+                Navigator.pushNamed(context, '/bloc/example/');
               },
               child: const Text('Bloc Example'),
             ),
             TextButton(
               onPressed: () {
-                Navigator.of(context).pushNamed('bloc/example/freezed');
+                Navigator.pushNamed(context, '/bloc/example/freezed');
               },
               child: const Text('Bloc Freezed Example'),
             ),
             TextButton(
               onPressed: () {
-                Navigator.of(context).pushNamed('/contacts/list');
+                Navigator.pushNamed(context, '/contacts/list');
               },
               child: const Text('Contacts'),
             ),
             TextButton(
               onPressed: () {
-                Navigator.of(context).pushNamed('/cubit/list');
+                Navigator.pushNamed(context, '/cubit/list');
               },
               child: const Text('Cubit'),
             ),
