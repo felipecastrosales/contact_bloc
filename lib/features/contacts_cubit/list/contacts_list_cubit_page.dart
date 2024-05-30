@@ -40,18 +40,20 @@ class ContactsListCubitPage extends StatelessWidget {
                       );
                     },
                     builder: (context, contacts) {
-                      return ListView.builder(
-                        itemCount: contacts.length,
-                        itemBuilder: (context, index) {
-                          final contact = contacts[index];
-                          return ListTile(
-                            title: Text(contact.name),
-                            subtitle: Text(contact.email),
-                            onLongPress: () => context
-                                .read<ContactListCubit>()
-                                .delete(contact),
-                          );
-                        },
+                      return Expanded(
+                        child: ListView.builder(
+                          itemCount: contacts.length,
+                          itemBuilder: (context, index) {
+                            final contact = contacts[index];
+                            return ListTile(
+                              title: Text(contact.name),
+                              subtitle: Text(contact.email),
+                              onLongPress: () => context
+                                  .read<ContactListCubit>()
+                                  .delete(contact),
+                            );
+                          },
+                        ),
                       );
                     },
                   ),
