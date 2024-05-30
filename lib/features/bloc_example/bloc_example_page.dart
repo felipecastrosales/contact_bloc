@@ -16,15 +16,13 @@ class BlocExamplePage extends StatelessWidget {
         title: const Text('BlocPage'),
       ),
       body: BlocListener<ExampleBloc, ExampleState>(
-        bloc: ExampleBloc(),
+        bloc: context.read<ExampleBloc>(),
         listenWhen: (previous, current) {
           if (previous is ExampleStateInitial && current is ExampleStateData) {
-            if (current.names.length > 2) {
-              return true;
-            }
+            return current.names.length > 2;
           }
+
           return false;
-          // return current is ExampleStateData;
         },
         listener: (context, state) {
           developer.log('state change}');
@@ -34,60 +32,57 @@ class BlocExamplePage extends StatelessWidget {
             );
           }
         },
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              BlocConsumer<ExampleBloc, ExampleState>(
-                buildWhen: (previous, current) {
-                  // ignore: unnecessary_type_check
-                  if (previous is ExampleState && current is ExampleStateData) {
-                    if (current.names.length > 1) {
-                      return true;
-                    }
-                  }
-                  return false;
-                },
-                listener: (context, state) {
-                  developer.log('state change to ${state.runtimeType}');
-                },
-                builder: (_, state) {
-                  if (state is ExampleStateData) {
-                    return Text('Quantity is: ${state.names.length}');
-                  }
-                  return const SizedBox.shrink();
-                },
-              ),
-              BlocSelector<ExampleBloc, ExampleState, bool>(
-                selector: (state) {
-                  if (state is ExampleStateInitial) {
-                    return true;
-                  }
-                  return false;
-                },
-                builder: (context, showLoader) {
-                  if (showLoader) {
-                    return const Expanded(
-                      child: Center(
-                        child: CircularProgressIndicator(),
-                      ),
-                    );
-                  }
-                  return const SizedBox.shrink();
-                },
-              ),
-              BlocSelector<ExampleBloc, ExampleState, List<String>>(
-                selector: (state) {
-                  if (state is ExampleStateData) {
-                    return state.names;
-                  }
-                  return const [];
-                },
-                builder: (context, names) {
-                  developer.log(
-                    '${names.runtimeType}',
-                    name: 'names runtimeType',
+        child: Column(
+          children: [
+            BlocConsumer<ExampleBloc, ExampleState>(
+              buildWhen: (previous, current) {
+                if (current is ExampleStateData) {
+                  return current.names.length > 1;
+                }
+
+                return false;
+              },
+              listener: (context, state) {
+                developer.log('state change to ${state.runtimeType}');
+              },
+              builder: (_, state) {
+                if (state is ExampleStateData) {
+                  return Text('Quantity is: ${state.names.length}');
+                }
+
+                return const SizedBox.shrink();
+              },
+            ),
+            BlocSelector<ExampleBloc, ExampleState, bool>(
+              selector: (state) => state is ExampleStateInitial,
+              builder: (context, showLoader) {
+                if (showLoader) {
+                  return const Expanded(
+                    child: Center(
+                      child: CircularProgressIndicator(),
+                    ),
                   );
-                  return ListView.builder(
+                }
+
+                return const SizedBox.shrink();
+              },
+            ),
+            BlocSelector<ExampleBloc, ExampleState, List<String>>(
+              selector: (state) {
+                if (state is ExampleStateData) {
+                  return state.names;
+                }
+
+                return const [];
+              },
+              builder: (context, names) {
+                developer.log(
+                  '${names.runtimeType}',
+                  name: 'names runtimeType',
+                );
+
+                return Expanded(
+                  child: ListView.builder(
                     shrinkWrap: true,
                     itemCount: names.length,
                     itemBuilder: (context, index) {
@@ -100,11 +95,11 @@ class BlocExamplePage extends StatelessWidget {
                         title: Text(names[index]),
                       );
                     },
-                  );
-                },
-              ),
-            ],
-          ),
+                  ),
+                );
+              },
+            ),
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
