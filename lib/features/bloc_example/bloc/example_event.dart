@@ -1,15 +1,32 @@
 part of 'example_bloc.dart';
 
-abstract class ExampleEvent {}
+abstract class ExampleEvent extends Equatable {
+  const ExampleEvent();
+
+  @override
+  List<Object> get props => [];
+}
 
 class ExampleFindNameEvent extends ExampleEvent {}
 
 class ExampleAddNameEvent extends ExampleEvent {
-  final String name;
-  ExampleAddNameEvent({required this.name});
+  const ExampleAddNameEvent({
+    required this.note,
+  });
+
+  final ContactNote note;
+
+  @override
+  List<Object> get props => [note];
 }
 
 class ExampleRemoveNameEvent extends ExampleEvent {
-  final String name;
-  ExampleRemoveNameEvent({required this.name});
+  const ExampleRemoveNameEvent({
+    required this.note,
+  });
+
+  final ContactNote note;
+
+  @override
+  List<Object> get props => [note];
 }

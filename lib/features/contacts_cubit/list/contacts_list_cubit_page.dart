@@ -32,6 +32,7 @@ class ContactsListCubitPage extends StatelessWidget {
                   ),
                   BlocSelector<ContactListCubit, ContactListState,
                       List<Contact>>(
+                    bloc: context.read<ContactListCubit>(),
                     selector: (state) {
                       return state.maybeWhen(
                         data: (contacts) => contacts,
