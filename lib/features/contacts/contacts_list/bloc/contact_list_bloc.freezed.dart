@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'contact_list_bloc.dart';
 
@@ -12,25 +12,7 @@ part of 'contact_list_bloc.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$ContactListEventTearOff {
-  const _$ContactListEventTearOff();
-
-  _ContactListEventFindAll findAll() {
-    return const _ContactListEventFindAll();
-  }
-
-  _ContactListEventDelete delete({required Contact model}) {
-    return _ContactListEventDelete(
-      model: model,
-    );
-  }
-}
-
-/// @nodoc
-const $ContactListEvent = _$ContactListEventTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$ContactListEvent {
@@ -42,8 +24,8 @@ mixin _$ContactListEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? findAll,
-    TResult Function(Contact model)? delete,
+    TResult? Function()? findAll,
+    TResult? Function(Contact model)? delete,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -61,8 +43,8 @@ mixin _$ContactListEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_ContactListEventFindAll value)? findAll,
-    TResult Function(_ContactListEventDelete value)? delete,
+    TResult? Function(_ContactListEventFindAll value)? findAll,
+    TResult? Function(_ContactListEventDelete value)? delete,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -78,43 +60,42 @@ mixin _$ContactListEvent {
 abstract class $ContactListEventCopyWith<$Res> {
   factory $ContactListEventCopyWith(
           ContactListEvent value, $Res Function(ContactListEvent) then) =
-      _$ContactListEventCopyWithImpl<$Res>;
+      _$ContactListEventCopyWithImpl<$Res, ContactListEvent>;
 }
 
 /// @nodoc
-class _$ContactListEventCopyWithImpl<$Res>
+class _$ContactListEventCopyWithImpl<$Res, $Val extends ContactListEvent>
     implements $ContactListEventCopyWith<$Res> {
   _$ContactListEventCopyWithImpl(this._value, this._then);
 
-  final ContactListEvent _value;
   // ignore: unused_field
-  final $Res Function(ContactListEvent) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$ContactListEventFindAllCopyWith<$Res> {
-  factory _$ContactListEventFindAllCopyWith(_ContactListEventFindAll value,
-          $Res Function(_ContactListEventFindAll) then) =
-      __$ContactListEventFindAllCopyWithImpl<$Res>;
+abstract class _$$ContactListEventFindAllImplCopyWith<$Res> {
+  factory _$$ContactListEventFindAllImplCopyWith(
+          _$ContactListEventFindAllImpl value,
+          $Res Function(_$ContactListEventFindAllImpl) then) =
+      __$$ContactListEventFindAllImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$ContactListEventFindAllCopyWithImpl<$Res>
-    extends _$ContactListEventCopyWithImpl<$Res>
-    implements _$ContactListEventFindAllCopyWith<$Res> {
-  __$ContactListEventFindAllCopyWithImpl(_ContactListEventFindAll _value,
-      $Res Function(_ContactListEventFindAll) _then)
-      : super(_value, (v) => _then(v as _ContactListEventFindAll));
-
-  @override
-  _ContactListEventFindAll get _value =>
-      super._value as _ContactListEventFindAll;
+class __$$ContactListEventFindAllImplCopyWithImpl<$Res>
+    extends _$ContactListEventCopyWithImpl<$Res, _$ContactListEventFindAllImpl>
+    implements _$$ContactListEventFindAllImplCopyWith<$Res> {
+  __$$ContactListEventFindAllImplCopyWithImpl(
+      _$ContactListEventFindAllImpl _value,
+      $Res Function(_$ContactListEventFindAllImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_ContactListEventFindAll implements _ContactListEventFindAll {
-  const _$_ContactListEventFindAll();
+class _$ContactListEventFindAllImpl implements _ContactListEventFindAll {
+  const _$ContactListEventFindAllImpl();
 
   @override
   String toString() {
@@ -122,9 +103,10 @@ class _$_ContactListEventFindAll implements _ContactListEventFindAll {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _ContactListEventFindAll);
+        (other.runtimeType == runtimeType &&
+            other is _$ContactListEventFindAllImpl);
   }
 
   @override
@@ -142,8 +124,8 @@ class _$_ContactListEventFindAll implements _ContactListEventFindAll {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? findAll,
-    TResult Function(Contact model)? delete,
+    TResult? Function()? findAll,
+    TResult? Function(Contact model)? delete,
   }) {
     return findAll?.call();
   }
@@ -173,8 +155,8 @@ class _$_ContactListEventFindAll implements _ContactListEventFindAll {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_ContactListEventFindAll value)? findAll,
-    TResult Function(_ContactListEventDelete value)? delete,
+    TResult? Function(_ContactListEventFindAll value)? findAll,
+    TResult? Function(_ContactListEventDelete value)? delete,
   }) {
     return findAll?.call(this);
   }
@@ -194,34 +176,35 @@ class _$_ContactListEventFindAll implements _ContactListEventFindAll {
 }
 
 abstract class _ContactListEventFindAll implements ContactListEvent {
-  const factory _ContactListEventFindAll() = _$_ContactListEventFindAll;
+  const factory _ContactListEventFindAll() = _$ContactListEventFindAllImpl;
 }
 
 /// @nodoc
-abstract class _$ContactListEventDeleteCopyWith<$Res> {
-  factory _$ContactListEventDeleteCopyWith(_ContactListEventDelete value,
-          $Res Function(_ContactListEventDelete) then) =
-      __$ContactListEventDeleteCopyWithImpl<$Res>;
+abstract class _$$ContactListEventDeleteImplCopyWith<$Res> {
+  factory _$$ContactListEventDeleteImplCopyWith(
+          _$ContactListEventDeleteImpl value,
+          $Res Function(_$ContactListEventDeleteImpl) then) =
+      __$$ContactListEventDeleteImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({Contact model});
 }
 
 /// @nodoc
-class __$ContactListEventDeleteCopyWithImpl<$Res>
-    extends _$ContactListEventCopyWithImpl<$Res>
-    implements _$ContactListEventDeleteCopyWith<$Res> {
-  __$ContactListEventDeleteCopyWithImpl(_ContactListEventDelete _value,
-      $Res Function(_ContactListEventDelete) _then)
-      : super(_value, (v) => _then(v as _ContactListEventDelete));
+class __$$ContactListEventDeleteImplCopyWithImpl<$Res>
+    extends _$ContactListEventCopyWithImpl<$Res, _$ContactListEventDeleteImpl>
+    implements _$$ContactListEventDeleteImplCopyWith<$Res> {
+  __$$ContactListEventDeleteImplCopyWithImpl(
+      _$ContactListEventDeleteImpl _value,
+      $Res Function(_$ContactListEventDeleteImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _ContactListEventDelete get _value => super._value as _ContactListEventDelete;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? model = freezed,
+    Object? model = null,
   }) {
-    return _then(_ContactListEventDelete(
-      model: model == freezed
+    return _then(_$ContactListEventDeleteImpl(
+      model: null == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
               as Contact,
@@ -231,8 +214,8 @@ class __$ContactListEventDeleteCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ContactListEventDelete implements _ContactListEventDelete {
-  const _$_ContactListEventDelete({required this.model});
+class _$ContactListEventDeleteImpl implements _ContactListEventDelete {
+  const _$ContactListEventDeleteImpl({required this.model});
 
   @override
   final Contact model;
@@ -243,22 +226,22 @@ class _$_ContactListEventDelete implements _ContactListEventDelete {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ContactListEventDelete &&
-            const DeepCollectionEquality().equals(other.model, model));
+            other is _$ContactListEventDeleteImpl &&
+            (identical(other.model, model) || other.model == model));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(model));
+  int get hashCode => Object.hash(runtimeType, model);
 
   @JsonKey(ignore: true)
   @override
-  _$ContactListEventDeleteCopyWith<_ContactListEventDelete> get copyWith =>
-      __$ContactListEventDeleteCopyWithImpl<_ContactListEventDelete>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ContactListEventDeleteImplCopyWith<_$ContactListEventDeleteImpl>
+      get copyWith => __$$ContactListEventDeleteImplCopyWithImpl<
+          _$ContactListEventDeleteImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -272,8 +255,8 @@ class _$_ContactListEventDelete implements _ContactListEventDelete {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? findAll,
-    TResult Function(Contact model)? delete,
+    TResult? Function()? findAll,
+    TResult? Function(Contact model)? delete,
   }) {
     return delete?.call(model);
   }
@@ -303,8 +286,8 @@ class _$_ContactListEventDelete implements _ContactListEventDelete {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_ContactListEventFindAll value)? findAll,
-    TResult Function(_ContactListEventDelete value)? delete,
+    TResult? Function(_ContactListEventFindAll value)? findAll,
+    TResult? Function(_ContactListEventDelete value)? delete,
   }) {
     return delete?.call(this);
   }
@@ -324,42 +307,14 @@ class _$_ContactListEventDelete implements _ContactListEventDelete {
 }
 
 abstract class _ContactListEventDelete implements ContactListEvent {
-  const factory _ContactListEventDelete({required Contact model}) =
-      _$_ContactListEventDelete;
+  const factory _ContactListEventDelete({required final Contact model}) =
+      _$ContactListEventDeleteImpl;
 
   Contact get model;
   @JsonKey(ignore: true)
-  _$ContactListEventDeleteCopyWith<_ContactListEventDelete> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ContactListEventDeleteImplCopyWith<_$ContactListEventDeleteImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
-
-/// @nodoc
-class _$ContactListStateTearOff {
-  const _$ContactListStateTearOff();
-
-  _ContactListStateInitial initial() {
-    return const _ContactListStateInitial();
-  }
-
-  _ContactListStateLoading loading() {
-    return const _ContactListStateLoading();
-  }
-
-  _ContactListStateData data({required List<Contact> contacts}) {
-    return _ContactListStateData(
-      contacts: contacts,
-    );
-  }
-
-  _ContactListStateError error({required String error}) {
-    return _ContactListStateError(
-      error: error,
-    );
-  }
-}
-
-/// @nodoc
-const $ContactListState = _$ContactListStateTearOff();
 
 /// @nodoc
 mixin _$ContactListState {
@@ -373,10 +328,10 @@ mixin _$ContactListState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(List<Contact> contacts)? data,
-    TResult Function(String error)? error,
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<Contact> contacts)? data,
+    TResult? Function(String error)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -398,10 +353,10 @@ mixin _$ContactListState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_ContactListStateInitial value)? initial,
-    TResult Function(_ContactListStateLoading value)? loading,
-    TResult Function(_ContactListStateData value)? data,
-    TResult Function(_ContactListStateError value)? error,
+    TResult? Function(_ContactListStateInitial value)? initial,
+    TResult? Function(_ContactListStateLoading value)? loading,
+    TResult? Function(_ContactListStateData value)? data,
+    TResult? Function(_ContactListStateError value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -419,43 +374,42 @@ mixin _$ContactListState {
 abstract class $ContactListStateCopyWith<$Res> {
   factory $ContactListStateCopyWith(
           ContactListState value, $Res Function(ContactListState) then) =
-      _$ContactListStateCopyWithImpl<$Res>;
+      _$ContactListStateCopyWithImpl<$Res, ContactListState>;
 }
 
 /// @nodoc
-class _$ContactListStateCopyWithImpl<$Res>
+class _$ContactListStateCopyWithImpl<$Res, $Val extends ContactListState>
     implements $ContactListStateCopyWith<$Res> {
   _$ContactListStateCopyWithImpl(this._value, this._then);
 
-  final ContactListState _value;
   // ignore: unused_field
-  final $Res Function(ContactListState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$ContactListStateInitialCopyWith<$Res> {
-  factory _$ContactListStateInitialCopyWith(_ContactListStateInitial value,
-          $Res Function(_ContactListStateInitial) then) =
-      __$ContactListStateInitialCopyWithImpl<$Res>;
+abstract class _$$ContactListStateInitialImplCopyWith<$Res> {
+  factory _$$ContactListStateInitialImplCopyWith(
+          _$ContactListStateInitialImpl value,
+          $Res Function(_$ContactListStateInitialImpl) then) =
+      __$$ContactListStateInitialImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$ContactListStateInitialCopyWithImpl<$Res>
-    extends _$ContactListStateCopyWithImpl<$Res>
-    implements _$ContactListStateInitialCopyWith<$Res> {
-  __$ContactListStateInitialCopyWithImpl(_ContactListStateInitial _value,
-      $Res Function(_ContactListStateInitial) _then)
-      : super(_value, (v) => _then(v as _ContactListStateInitial));
-
-  @override
-  _ContactListStateInitial get _value =>
-      super._value as _ContactListStateInitial;
+class __$$ContactListStateInitialImplCopyWithImpl<$Res>
+    extends _$ContactListStateCopyWithImpl<$Res, _$ContactListStateInitialImpl>
+    implements _$$ContactListStateInitialImplCopyWith<$Res> {
+  __$$ContactListStateInitialImplCopyWithImpl(
+      _$ContactListStateInitialImpl _value,
+      $Res Function(_$ContactListStateInitialImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_ContactListStateInitial implements _ContactListStateInitial {
-  const _$_ContactListStateInitial();
+class _$ContactListStateInitialImpl implements _ContactListStateInitial {
+  const _$ContactListStateInitialImpl();
 
   @override
   String toString() {
@@ -463,9 +417,10 @@ class _$_ContactListStateInitial implements _ContactListStateInitial {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _ContactListStateInitial);
+        (other.runtimeType == runtimeType &&
+            other is _$ContactListStateInitialImpl);
   }
 
   @override
@@ -485,10 +440,10 @@ class _$_ContactListStateInitial implements _ContactListStateInitial {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(List<Contact> contacts)? data,
-    TResult Function(String error)? error,
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<Contact> contacts)? data,
+    TResult? Function(String error)? error,
   }) {
     return initial?.call();
   }
@@ -522,10 +477,10 @@ class _$_ContactListStateInitial implements _ContactListStateInitial {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_ContactListStateInitial value)? initial,
-    TResult Function(_ContactListStateLoading value)? loading,
-    TResult Function(_ContactListStateData value)? data,
-    TResult Function(_ContactListStateError value)? error,
+    TResult? Function(_ContactListStateInitial value)? initial,
+    TResult? Function(_ContactListStateLoading value)? loading,
+    TResult? Function(_ContactListStateData value)? data,
+    TResult? Function(_ContactListStateError value)? error,
   }) {
     return initial?.call(this);
   }
@@ -547,33 +502,31 @@ class _$_ContactListStateInitial implements _ContactListStateInitial {
 }
 
 abstract class _ContactListStateInitial implements ContactListState {
-  const factory _ContactListStateInitial() = _$_ContactListStateInitial;
+  const factory _ContactListStateInitial() = _$ContactListStateInitialImpl;
 }
 
 /// @nodoc
-abstract class _$ContactListStateLoadingCopyWith<$Res> {
-  factory _$ContactListStateLoadingCopyWith(_ContactListStateLoading value,
-          $Res Function(_ContactListStateLoading) then) =
-      __$ContactListStateLoadingCopyWithImpl<$Res>;
+abstract class _$$ContactListStateLoadingImplCopyWith<$Res> {
+  factory _$$ContactListStateLoadingImplCopyWith(
+          _$ContactListStateLoadingImpl value,
+          $Res Function(_$ContactListStateLoadingImpl) then) =
+      __$$ContactListStateLoadingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$ContactListStateLoadingCopyWithImpl<$Res>
-    extends _$ContactListStateCopyWithImpl<$Res>
-    implements _$ContactListStateLoadingCopyWith<$Res> {
-  __$ContactListStateLoadingCopyWithImpl(_ContactListStateLoading _value,
-      $Res Function(_ContactListStateLoading) _then)
-      : super(_value, (v) => _then(v as _ContactListStateLoading));
-
-  @override
-  _ContactListStateLoading get _value =>
-      super._value as _ContactListStateLoading;
+class __$$ContactListStateLoadingImplCopyWithImpl<$Res>
+    extends _$ContactListStateCopyWithImpl<$Res, _$ContactListStateLoadingImpl>
+    implements _$$ContactListStateLoadingImplCopyWith<$Res> {
+  __$$ContactListStateLoadingImplCopyWithImpl(
+      _$ContactListStateLoadingImpl _value,
+      $Res Function(_$ContactListStateLoadingImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_ContactListStateLoading implements _ContactListStateLoading {
-  const _$_ContactListStateLoading();
+class _$ContactListStateLoadingImpl implements _ContactListStateLoading {
+  const _$ContactListStateLoadingImpl();
 
   @override
   String toString() {
@@ -581,9 +534,10 @@ class _$_ContactListStateLoading implements _ContactListStateLoading {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _ContactListStateLoading);
+        (other.runtimeType == runtimeType &&
+            other is _$ContactListStateLoadingImpl);
   }
 
   @override
@@ -603,10 +557,10 @@ class _$_ContactListStateLoading implements _ContactListStateLoading {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(List<Contact> contacts)? data,
-    TResult Function(String error)? error,
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<Contact> contacts)? data,
+    TResult? Function(String error)? error,
   }) {
     return loading?.call();
   }
@@ -640,10 +594,10 @@ class _$_ContactListStateLoading implements _ContactListStateLoading {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_ContactListStateInitial value)? initial,
-    TResult Function(_ContactListStateLoading value)? loading,
-    TResult Function(_ContactListStateData value)? data,
-    TResult Function(_ContactListStateError value)? error,
+    TResult? Function(_ContactListStateInitial value)? initial,
+    TResult? Function(_ContactListStateLoading value)? loading,
+    TResult? Function(_ContactListStateData value)? data,
+    TResult? Function(_ContactListStateError value)? error,
   }) {
     return loading?.call(this);
   }
@@ -665,35 +619,34 @@ class _$_ContactListStateLoading implements _ContactListStateLoading {
 }
 
 abstract class _ContactListStateLoading implements ContactListState {
-  const factory _ContactListStateLoading() = _$_ContactListStateLoading;
+  const factory _ContactListStateLoading() = _$ContactListStateLoadingImpl;
 }
 
 /// @nodoc
-abstract class _$ContactListStateDataCopyWith<$Res> {
-  factory _$ContactListStateDataCopyWith(_ContactListStateData value,
-          $Res Function(_ContactListStateData) then) =
-      __$ContactListStateDataCopyWithImpl<$Res>;
+abstract class _$$ContactListStateDataImplCopyWith<$Res> {
+  factory _$$ContactListStateDataImplCopyWith(_$ContactListStateDataImpl value,
+          $Res Function(_$ContactListStateDataImpl) then) =
+      __$$ContactListStateDataImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({List<Contact> contacts});
 }
 
 /// @nodoc
-class __$ContactListStateDataCopyWithImpl<$Res>
-    extends _$ContactListStateCopyWithImpl<$Res>
-    implements _$ContactListStateDataCopyWith<$Res> {
-  __$ContactListStateDataCopyWithImpl(
-      _ContactListStateData _value, $Res Function(_ContactListStateData) _then)
-      : super(_value, (v) => _then(v as _ContactListStateData));
+class __$$ContactListStateDataImplCopyWithImpl<$Res>
+    extends _$ContactListStateCopyWithImpl<$Res, _$ContactListStateDataImpl>
+    implements _$$ContactListStateDataImplCopyWith<$Res> {
+  __$$ContactListStateDataImplCopyWithImpl(_$ContactListStateDataImpl _value,
+      $Res Function(_$ContactListStateDataImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _ContactListStateData get _value => super._value as _ContactListStateData;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? contacts = freezed,
+    Object? contacts = null,
   }) {
-    return _then(_ContactListStateData(
-      contacts: contacts == freezed
-          ? _value.contacts
+    return _then(_$ContactListStateDataImpl(
+      contacts: null == contacts
+          ? _value._contacts
           : contacts // ignore: cast_nullable_to_non_nullable
               as List<Contact>,
     ));
@@ -702,11 +655,17 @@ class __$ContactListStateDataCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ContactListStateData implements _ContactListStateData {
-  const _$_ContactListStateData({required this.contacts});
+class _$ContactListStateDataImpl implements _ContactListStateData {
+  const _$ContactListStateDataImpl({required final List<Contact> contacts})
+      : _contacts = contacts;
 
+  final List<Contact> _contacts;
   @override
-  final List<Contact> contacts;
+  List<Contact> get contacts {
+    if (_contacts is EqualUnmodifiableListView) return _contacts;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_contacts);
+  }
 
   @override
   String toString() {
@@ -714,22 +673,24 @@ class _$_ContactListStateData implements _ContactListStateData {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ContactListStateData &&
-            const DeepCollectionEquality().equals(other.contacts, contacts));
+            other is _$ContactListStateDataImpl &&
+            const DeepCollectionEquality().equals(other._contacts, _contacts));
   }
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(contacts));
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_contacts));
 
   @JsonKey(ignore: true)
   @override
-  _$ContactListStateDataCopyWith<_ContactListStateData> get copyWith =>
-      __$ContactListStateDataCopyWithImpl<_ContactListStateData>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ContactListStateDataImplCopyWith<_$ContactListStateDataImpl>
+      get copyWith =>
+          __$$ContactListStateDataImplCopyWithImpl<_$ContactListStateDataImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -745,10 +706,10 @@ class _$_ContactListStateData implements _ContactListStateData {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(List<Contact> contacts)? data,
-    TResult Function(String error)? error,
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<Contact> contacts)? data,
+    TResult? Function(String error)? error,
   }) {
     return data?.call(contacts);
   }
@@ -782,10 +743,10 @@ class _$_ContactListStateData implements _ContactListStateData {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_ContactListStateInitial value)? initial,
-    TResult Function(_ContactListStateLoading value)? loading,
-    TResult Function(_ContactListStateData value)? data,
-    TResult Function(_ContactListStateError value)? error,
+    TResult? Function(_ContactListStateInitial value)? initial,
+    TResult? Function(_ContactListStateLoading value)? loading,
+    TResult? Function(_ContactListStateData value)? data,
+    TResult? Function(_ContactListStateError value)? error,
   }) {
     return data?.call(this);
   }
@@ -807,40 +768,40 @@ class _$_ContactListStateData implements _ContactListStateData {
 }
 
 abstract class _ContactListStateData implements ContactListState {
-  const factory _ContactListStateData({required List<Contact> contacts}) =
-      _$_ContactListStateData;
+  const factory _ContactListStateData({required final List<Contact> contacts}) =
+      _$ContactListStateDataImpl;
 
   List<Contact> get contacts;
   @JsonKey(ignore: true)
-  _$ContactListStateDataCopyWith<_ContactListStateData> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ContactListStateDataImplCopyWith<_$ContactListStateDataImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$ContactListStateErrorCopyWith<$Res> {
-  factory _$ContactListStateErrorCopyWith(_ContactListStateError value,
-          $Res Function(_ContactListStateError) then) =
-      __$ContactListStateErrorCopyWithImpl<$Res>;
+abstract class _$$ContactListStateErrorImplCopyWith<$Res> {
+  factory _$$ContactListStateErrorImplCopyWith(
+          _$ContactListStateErrorImpl value,
+          $Res Function(_$ContactListStateErrorImpl) then) =
+      __$$ContactListStateErrorImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({String error});
 }
 
 /// @nodoc
-class __$ContactListStateErrorCopyWithImpl<$Res>
-    extends _$ContactListStateCopyWithImpl<$Res>
-    implements _$ContactListStateErrorCopyWith<$Res> {
-  __$ContactListStateErrorCopyWithImpl(_ContactListStateError _value,
-      $Res Function(_ContactListStateError) _then)
-      : super(_value, (v) => _then(v as _ContactListStateError));
+class __$$ContactListStateErrorImplCopyWithImpl<$Res>
+    extends _$ContactListStateCopyWithImpl<$Res, _$ContactListStateErrorImpl>
+    implements _$$ContactListStateErrorImplCopyWith<$Res> {
+  __$$ContactListStateErrorImplCopyWithImpl(_$ContactListStateErrorImpl _value,
+      $Res Function(_$ContactListStateErrorImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _ContactListStateError get _value => super._value as _ContactListStateError;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? error = freezed,
+    Object? error = null,
   }) {
-    return _then(_ContactListStateError(
-      error: error == freezed
+    return _then(_$ContactListStateErrorImpl(
+      error: null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as String,
@@ -850,8 +811,8 @@ class __$ContactListStateErrorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ContactListStateError implements _ContactListStateError {
-  const _$_ContactListStateError({required this.error});
+class _$ContactListStateErrorImpl implements _ContactListStateError {
+  const _$ContactListStateErrorImpl({required this.error});
 
   @override
   final String error;
@@ -862,22 +823,22 @@ class _$_ContactListStateError implements _ContactListStateError {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ContactListStateError &&
-            const DeepCollectionEquality().equals(other.error, error));
+            other is _$ContactListStateErrorImpl &&
+            (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(error));
+  int get hashCode => Object.hash(runtimeType, error);
 
   @JsonKey(ignore: true)
   @override
-  _$ContactListStateErrorCopyWith<_ContactListStateError> get copyWith =>
-      __$ContactListStateErrorCopyWithImpl<_ContactListStateError>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ContactListStateErrorImplCopyWith<_$ContactListStateErrorImpl>
+      get copyWith => __$$ContactListStateErrorImplCopyWithImpl<
+          _$ContactListStateErrorImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -893,10 +854,10 @@ class _$_ContactListStateError implements _ContactListStateError {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(List<Contact> contacts)? data,
-    TResult Function(String error)? error,
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<Contact> contacts)? data,
+    TResult? Function(String error)? error,
   }) {
     return error?.call(this.error);
   }
@@ -930,10 +891,10 @@ class _$_ContactListStateError implements _ContactListStateError {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_ContactListStateInitial value)? initial,
-    TResult Function(_ContactListStateLoading value)? loading,
-    TResult Function(_ContactListStateData value)? data,
-    TResult Function(_ContactListStateError value)? error,
+    TResult? Function(_ContactListStateInitial value)? initial,
+    TResult? Function(_ContactListStateLoading value)? loading,
+    TResult? Function(_ContactListStateData value)? data,
+    TResult? Function(_ContactListStateError value)? error,
   }) {
     return error?.call(this);
   }
@@ -955,11 +916,11 @@ class _$_ContactListStateError implements _ContactListStateError {
 }
 
 abstract class _ContactListStateError implements ContactListState {
-  const factory _ContactListStateError({required String error}) =
-      _$_ContactListStateError;
+  const factory _ContactListStateError({required final String error}) =
+      _$ContactListStateErrorImpl;
 
   String get error;
   @JsonKey(ignore: true)
-  _$ContactListStateErrorCopyWith<_ContactListStateError> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ContactListStateErrorImplCopyWith<_$ContactListStateErrorImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

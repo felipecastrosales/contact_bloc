@@ -7,7 +7,7 @@ import 'package:contact_bloc/widgets/loader.dart';
 import 'cubit/contact_list_cubit.dart';
 
 class ContactsListCubitPage extends StatelessWidget {
-  const ContactsListCubitPage({Key? key}) : super(key: key);
+  const ContactsListCubitPage({super.key});
 
   @override
   Widget build(BuildContext context) {

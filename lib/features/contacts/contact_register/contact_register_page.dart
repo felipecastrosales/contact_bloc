@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'bloc/contact_register_bloc.dart';
 
 class ContactRegisterPage extends StatefulWidget {
-  const ContactRegisterPage({Key? key}) : super(key: key);
+  const ContactRegisterPage({super.key});
 
   @override
   State<ContactRegisterPage> createState() => _ContactRegisterPageState();

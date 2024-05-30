@@ -7,7 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'bloc_freezed/example_freezed_bloc.dart';
 
 class BlocFreezedExamplePage extends StatelessWidget {
-  const BlocFreezedExamplePage({Key? key}) : super(key: key);
+  const BlocFreezedExamplePage({super.key});
 
   @override
   Widget build(BuildContext context) {

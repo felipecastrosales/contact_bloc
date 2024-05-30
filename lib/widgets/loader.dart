@@ -6,9 +6,9 @@ class Loader<B extends StateStreamable<S>, S> extends StatelessWidget {
   final BlocWidgetSelector<S, bool> selector;
 
   const Loader({
-    Key? key,
+    super.key,
     required this.selector,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

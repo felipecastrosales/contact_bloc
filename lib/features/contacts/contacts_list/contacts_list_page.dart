@@ -7,10 +7,12 @@ import 'package:contact_bloc/models/contact.dart';
 import 'bloc/contact_list_bloc.dart';
 
 class ContactsListPage extends StatelessWidget {
-  const ContactsListPage({Key? key}) : super(key: key);
+  const ContactsListPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final bloc = context.read<ContactListBloc>();
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Contact List Page'),
@@ -72,10 +74,10 @@ class ContactsListPage extends StatelessWidget {
                             return ListTile(
                               title: Text(contact.name),
                               subtitle: Text(contact.email),
-                              onLongPress: () async {
-                                context.read<ContactListBloc>().add(
-                                      ContactListEvent.delete(model: contact),
-                                    );
+                              onLongPress: () {
+                                bloc.add(
+                                  ContactListEvent.delete(model: contact),
+                                );
                               },
                               onTap: () async {
                                 await Navigator.pushNamed(
@@ -83,9 +85,9 @@ class ContactsListPage extends StatelessWidget {
                                   '/contacts/update',
                                   arguments: contact,
                                 );
-                                context.read<ContactListBloc>().add(
-                                      const ContactListEvent.findAll(),
-                                    );
+                                bloc.add(
+                                  const ContactListEvent.findAll(),
+                                );
                               },
                             );
                           },
@@ -94,7 +96,7 @@ class ContactsListPage extends StatelessWidget {
                     ),
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),
@@ -102,7 +104,7 @@ class ContactsListPage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
           await Navigator.of(context).pushNamed('/contacts/register');
-          context.read<ContactListBloc>().add(const ContactListEvent.findAll());
+          bloc.add(const ContactListEvent.findAll());
         },
         child: const Icon(Icons.add),
       ),

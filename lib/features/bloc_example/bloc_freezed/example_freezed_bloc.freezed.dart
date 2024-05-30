@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'example_freezed_bloc.dart';
 
@@ -12,37 +12,7 @@ part of 'example_freezed_bloc.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$ExampleFreezedStateTearOff {
-  const _$ExampleFreezedStateTearOff();
-
-  _ExampleFreezedStateInitial initial() {
-    return _ExampleFreezedStateInitial();
-  }
-
-  _ExampleFreezedStateData data({required List<String> names}) {
-    return _ExampleFreezedStateData(
-      names: names,
-    );
-  }
-
-  _ExampleFreezedStateLoading loading() {
-    return _ExampleFreezedStateLoading();
-  }
-
-  _ExampleFreezedStateShowBanner showBanner(
-      {required List<String> names, required String message}) {
-    return _ExampleFreezedStateShowBanner(
-      names: names,
-      message: message,
-    );
-  }
-}
-
-/// @nodoc
-const $ExampleFreezedState = _$ExampleFreezedStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$ExampleFreezedState {
@@ -56,10 +26,10 @@ mixin _$ExampleFreezedState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(List<String> names)? data,
-    TResult Function()? loading,
-    TResult Function(List<String> names, String message)? showBanner,
+    TResult? Function()? initial,
+    TResult? Function(List<String> names)? data,
+    TResult? Function()? loading,
+    TResult? Function(List<String> names, String message)? showBanner,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -81,10 +51,10 @@ mixin _$ExampleFreezedState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_ExampleFreezedStateInitial value)? initial,
-    TResult Function(_ExampleFreezedStateData value)? data,
-    TResult Function(_ExampleFreezedStateLoading value)? loading,
-    TResult Function(_ExampleFreezedStateShowBanner value)? showBanner,
+    TResult? Function(_ExampleFreezedStateInitial value)? initial,
+    TResult? Function(_ExampleFreezedStateData value)? data,
+    TResult? Function(_ExampleFreezedStateLoading value)? loading,
+    TResult? Function(_ExampleFreezedStateShowBanner value)? showBanner,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -102,44 +72,43 @@ mixin _$ExampleFreezedState {
 abstract class $ExampleFreezedStateCopyWith<$Res> {
   factory $ExampleFreezedStateCopyWith(
           ExampleFreezedState value, $Res Function(ExampleFreezedState) then) =
-      _$ExampleFreezedStateCopyWithImpl<$Res>;
+      _$ExampleFreezedStateCopyWithImpl<$Res, ExampleFreezedState>;
 }
 
 /// @nodoc
-class _$ExampleFreezedStateCopyWithImpl<$Res>
+class _$ExampleFreezedStateCopyWithImpl<$Res, $Val extends ExampleFreezedState>
     implements $ExampleFreezedStateCopyWith<$Res> {
   _$ExampleFreezedStateCopyWithImpl(this._value, this._then);
 
-  final ExampleFreezedState _value;
   // ignore: unused_field
-  final $Res Function(ExampleFreezedState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$ExampleFreezedStateInitialCopyWith<$Res> {
-  factory _$ExampleFreezedStateInitialCopyWith(
-          _ExampleFreezedStateInitial value,
-          $Res Function(_ExampleFreezedStateInitial) then) =
-      __$ExampleFreezedStateInitialCopyWithImpl<$Res>;
+abstract class _$$ExampleFreezedStateInitialImplCopyWith<$Res> {
+  factory _$$ExampleFreezedStateInitialImplCopyWith(
+          _$ExampleFreezedStateInitialImpl value,
+          $Res Function(_$ExampleFreezedStateInitialImpl) then) =
+      __$$ExampleFreezedStateInitialImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$ExampleFreezedStateInitialCopyWithImpl<$Res>
-    extends _$ExampleFreezedStateCopyWithImpl<$Res>
-    implements _$ExampleFreezedStateInitialCopyWith<$Res> {
-  __$ExampleFreezedStateInitialCopyWithImpl(_ExampleFreezedStateInitial _value,
-      $Res Function(_ExampleFreezedStateInitial) _then)
-      : super(_value, (v) => _then(v as _ExampleFreezedStateInitial));
-
-  @override
-  _ExampleFreezedStateInitial get _value =>
-      super._value as _ExampleFreezedStateInitial;
+class __$$ExampleFreezedStateInitialImplCopyWithImpl<$Res>
+    extends _$ExampleFreezedStateCopyWithImpl<$Res,
+        _$ExampleFreezedStateInitialImpl>
+    implements _$$ExampleFreezedStateInitialImplCopyWith<$Res> {
+  __$$ExampleFreezedStateInitialImplCopyWithImpl(
+      _$ExampleFreezedStateInitialImpl _value,
+      $Res Function(_$ExampleFreezedStateInitialImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_ExampleFreezedStateInitial implements _ExampleFreezedStateInitial {
-  _$_ExampleFreezedStateInitial();
+class _$ExampleFreezedStateInitialImpl implements _ExampleFreezedStateInitial {
+  _$ExampleFreezedStateInitialImpl();
 
   @override
   String toString() {
@@ -147,10 +116,10 @@ class _$_ExampleFreezedStateInitial implements _ExampleFreezedStateInitial {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ExampleFreezedStateInitial);
+            other is _$ExampleFreezedStateInitialImpl);
   }
 
   @override
@@ -170,10 +139,10 @@ class _$_ExampleFreezedStateInitial implements _ExampleFreezedStateInitial {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(List<String> names)? data,
-    TResult Function()? loading,
-    TResult Function(List<String> names, String message)? showBanner,
+    TResult? Function()? initial,
+    TResult? Function(List<String> names)? data,
+    TResult? Function()? loading,
+    TResult? Function(List<String> names, String message)? showBanner,
   }) {
     return initial?.call();
   }
@@ -207,10 +176,10 @@ class _$_ExampleFreezedStateInitial implements _ExampleFreezedStateInitial {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_ExampleFreezedStateInitial value)? initial,
-    TResult Function(_ExampleFreezedStateData value)? data,
-    TResult Function(_ExampleFreezedStateLoading value)? loading,
-    TResult Function(_ExampleFreezedStateShowBanner value)? showBanner,
+    TResult? Function(_ExampleFreezedStateInitial value)? initial,
+    TResult? Function(_ExampleFreezedStateData value)? data,
+    TResult? Function(_ExampleFreezedStateLoading value)? loading,
+    TResult? Function(_ExampleFreezedStateShowBanner value)? showBanner,
   }) {
     return initial?.call(this);
   }
@@ -232,36 +201,37 @@ class _$_ExampleFreezedStateInitial implements _ExampleFreezedStateInitial {
 }
 
 abstract class _ExampleFreezedStateInitial implements ExampleFreezedState {
-  factory _ExampleFreezedStateInitial() = _$_ExampleFreezedStateInitial;
+  factory _ExampleFreezedStateInitial() = _$ExampleFreezedStateInitialImpl;
 }
 
 /// @nodoc
-abstract class _$ExampleFreezedStateDataCopyWith<$Res> {
-  factory _$ExampleFreezedStateDataCopyWith(_ExampleFreezedStateData value,
-          $Res Function(_ExampleFreezedStateData) then) =
-      __$ExampleFreezedStateDataCopyWithImpl<$Res>;
+abstract class _$$ExampleFreezedStateDataImplCopyWith<$Res> {
+  factory _$$ExampleFreezedStateDataImplCopyWith(
+          _$ExampleFreezedStateDataImpl value,
+          $Res Function(_$ExampleFreezedStateDataImpl) then) =
+      __$$ExampleFreezedStateDataImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({List<String> names});
 }
 
 /// @nodoc
-class __$ExampleFreezedStateDataCopyWithImpl<$Res>
-    extends _$ExampleFreezedStateCopyWithImpl<$Res>
-    implements _$ExampleFreezedStateDataCopyWith<$Res> {
-  __$ExampleFreezedStateDataCopyWithImpl(_ExampleFreezedStateData _value,
-      $Res Function(_ExampleFreezedStateData) _then)
-      : super(_value, (v) => _then(v as _ExampleFreezedStateData));
+class __$$ExampleFreezedStateDataImplCopyWithImpl<$Res>
+    extends _$ExampleFreezedStateCopyWithImpl<$Res,
+        _$ExampleFreezedStateDataImpl>
+    implements _$$ExampleFreezedStateDataImplCopyWith<$Res> {
+  __$$ExampleFreezedStateDataImplCopyWithImpl(
+      _$ExampleFreezedStateDataImpl _value,
+      $Res Function(_$ExampleFreezedStateDataImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _ExampleFreezedStateData get _value =>
-      super._value as _ExampleFreezedStateData;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? names = freezed,
+    Object? names = null,
   }) {
-    return _then(_ExampleFreezedStateData(
-      names: names == freezed
-          ? _value.names
+    return _then(_$ExampleFreezedStateDataImpl(
+      names: null == names
+          ? _value._names
           : names // ignore: cast_nullable_to_non_nullable
               as List<String>,
     ));
@@ -270,11 +240,17 @@ class __$ExampleFreezedStateDataCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ExampleFreezedStateData implements _ExampleFreezedStateData {
-  _$_ExampleFreezedStateData({required this.names});
+class _$ExampleFreezedStateDataImpl implements _ExampleFreezedStateData {
+  _$ExampleFreezedStateDataImpl({required final List<String> names})
+      : _names = names;
 
+  final List<String> _names;
   @override
-  final List<String> names;
+  List<String> get names {
+    if (_names is EqualUnmodifiableListView) return _names;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_names);
+  }
 
   @override
   String toString() {
@@ -282,22 +258,23 @@ class _$_ExampleFreezedStateData implements _ExampleFreezedStateData {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ExampleFreezedStateData &&
-            const DeepCollectionEquality().equals(other.names, names));
+            other is _$ExampleFreezedStateDataImpl &&
+            const DeepCollectionEquality().equals(other._names, _names));
   }
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(names));
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_names));
 
   @JsonKey(ignore: true)
   @override
-  _$ExampleFreezedStateDataCopyWith<_ExampleFreezedStateData> get copyWith =>
-      __$ExampleFreezedStateDataCopyWithImpl<_ExampleFreezedStateData>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ExampleFreezedStateDataImplCopyWith<_$ExampleFreezedStateDataImpl>
+      get copyWith => __$$ExampleFreezedStateDataImplCopyWithImpl<
+          _$ExampleFreezedStateDataImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -313,10 +290,10 @@ class _$_ExampleFreezedStateData implements _ExampleFreezedStateData {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(List<String> names)? data,
-    TResult Function()? loading,
-    TResult Function(List<String> names, String message)? showBanner,
+    TResult? Function()? initial,
+    TResult? Function(List<String> names)? data,
+    TResult? Function()? loading,
+    TResult? Function(List<String> names, String message)? showBanner,
   }) {
     return data?.call(names);
   }
@@ -350,10 +327,10 @@ class _$_ExampleFreezedStateData implements _ExampleFreezedStateData {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_ExampleFreezedStateInitial value)? initial,
-    TResult Function(_ExampleFreezedStateData value)? data,
-    TResult Function(_ExampleFreezedStateLoading value)? loading,
-    TResult Function(_ExampleFreezedStateShowBanner value)? showBanner,
+    TResult? Function(_ExampleFreezedStateInitial value)? initial,
+    TResult? Function(_ExampleFreezedStateData value)? data,
+    TResult? Function(_ExampleFreezedStateLoading value)? loading,
+    TResult? Function(_ExampleFreezedStateShowBanner value)? showBanner,
   }) {
     return data?.call(this);
   }
@@ -375,40 +352,38 @@ class _$_ExampleFreezedStateData implements _ExampleFreezedStateData {
 }
 
 abstract class _ExampleFreezedStateData implements ExampleFreezedState {
-  factory _ExampleFreezedStateData({required List<String> names}) =
-      _$_ExampleFreezedStateData;
+  factory _ExampleFreezedStateData({required final List<String> names}) =
+      _$ExampleFreezedStateDataImpl;
 
   List<String> get names;
   @JsonKey(ignore: true)
-  _$ExampleFreezedStateDataCopyWith<_ExampleFreezedStateData> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ExampleFreezedStateDataImplCopyWith<_$ExampleFreezedStateDataImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$ExampleFreezedStateLoadingCopyWith<$Res> {
-  factory _$ExampleFreezedStateLoadingCopyWith(
-          _ExampleFreezedStateLoading value,
-          $Res Function(_ExampleFreezedStateLoading) then) =
-      __$ExampleFreezedStateLoadingCopyWithImpl<$Res>;
+abstract class _$$ExampleFreezedStateLoadingImplCopyWith<$Res> {
+  factory _$$ExampleFreezedStateLoadingImplCopyWith(
+          _$ExampleFreezedStateLoadingImpl value,
+          $Res Function(_$ExampleFreezedStateLoadingImpl) then) =
+      __$$ExampleFreezedStateLoadingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$ExampleFreezedStateLoadingCopyWithImpl<$Res>
-    extends _$ExampleFreezedStateCopyWithImpl<$Res>
-    implements _$ExampleFreezedStateLoadingCopyWith<$Res> {
-  __$ExampleFreezedStateLoadingCopyWithImpl(_ExampleFreezedStateLoading _value,
-      $Res Function(_ExampleFreezedStateLoading) _then)
-      : super(_value, (v) => _then(v as _ExampleFreezedStateLoading));
-
-  @override
-  _ExampleFreezedStateLoading get _value =>
-      super._value as _ExampleFreezedStateLoading;
+class __$$ExampleFreezedStateLoadingImplCopyWithImpl<$Res>
+    extends _$ExampleFreezedStateCopyWithImpl<$Res,
+        _$ExampleFreezedStateLoadingImpl>
+    implements _$$ExampleFreezedStateLoadingImplCopyWith<$Res> {
+  __$$ExampleFreezedStateLoadingImplCopyWithImpl(
+      _$ExampleFreezedStateLoadingImpl _value,
+      $Res Function(_$ExampleFreezedStateLoadingImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_ExampleFreezedStateLoading implements _ExampleFreezedStateLoading {
-  _$_ExampleFreezedStateLoading();
+class _$ExampleFreezedStateLoadingImpl implements _ExampleFreezedStateLoading {
+  _$ExampleFreezedStateLoadingImpl();
 
   @override
   String toString() {
@@ -416,10 +391,10 @@ class _$_ExampleFreezedStateLoading implements _ExampleFreezedStateLoading {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ExampleFreezedStateLoading);
+            other is _$ExampleFreezedStateLoadingImpl);
   }
 
   @override
@@ -439,10 +414,10 @@ class _$_ExampleFreezedStateLoading implements _ExampleFreezedStateLoading {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(List<String> names)? data,
-    TResult Function()? loading,
-    TResult Function(List<String> names, String message)? showBanner,
+    TResult? Function()? initial,
+    TResult? Function(List<String> names)? data,
+    TResult? Function()? loading,
+    TResult? Function(List<String> names, String message)? showBanner,
   }) {
     return loading?.call();
   }
@@ -476,10 +451,10 @@ class _$_ExampleFreezedStateLoading implements _ExampleFreezedStateLoading {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_ExampleFreezedStateInitial value)? initial,
-    TResult Function(_ExampleFreezedStateData value)? data,
-    TResult Function(_ExampleFreezedStateLoading value)? loading,
-    TResult Function(_ExampleFreezedStateShowBanner value)? showBanner,
+    TResult? Function(_ExampleFreezedStateInitial value)? initial,
+    TResult? Function(_ExampleFreezedStateData value)? data,
+    TResult? Function(_ExampleFreezedStateLoading value)? loading,
+    TResult? Function(_ExampleFreezedStateShowBanner value)? showBanner,
   }) {
     return loading?.call(this);
   }
@@ -501,42 +476,41 @@ class _$_ExampleFreezedStateLoading implements _ExampleFreezedStateLoading {
 }
 
 abstract class _ExampleFreezedStateLoading implements ExampleFreezedState {
-  factory _ExampleFreezedStateLoading() = _$_ExampleFreezedStateLoading;
+  factory _ExampleFreezedStateLoading() = _$ExampleFreezedStateLoadingImpl;
 }
 
 /// @nodoc
-abstract class _$ExampleFreezedStateShowBannerCopyWith<$Res> {
-  factory _$ExampleFreezedStateShowBannerCopyWith(
-          _ExampleFreezedStateShowBanner value,
-          $Res Function(_ExampleFreezedStateShowBanner) then) =
-      __$ExampleFreezedStateShowBannerCopyWithImpl<$Res>;
+abstract class _$$ExampleFreezedStateShowBannerImplCopyWith<$Res> {
+  factory _$$ExampleFreezedStateShowBannerImplCopyWith(
+          _$ExampleFreezedStateShowBannerImpl value,
+          $Res Function(_$ExampleFreezedStateShowBannerImpl) then) =
+      __$$ExampleFreezedStateShowBannerImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({List<String> names, String message});
 }
 
 /// @nodoc
-class __$ExampleFreezedStateShowBannerCopyWithImpl<$Res>
-    extends _$ExampleFreezedStateCopyWithImpl<$Res>
-    implements _$ExampleFreezedStateShowBannerCopyWith<$Res> {
-  __$ExampleFreezedStateShowBannerCopyWithImpl(
-      _ExampleFreezedStateShowBanner _value,
-      $Res Function(_ExampleFreezedStateShowBanner) _then)
-      : super(_value, (v) => _then(v as _ExampleFreezedStateShowBanner));
+class __$$ExampleFreezedStateShowBannerImplCopyWithImpl<$Res>
+    extends _$ExampleFreezedStateCopyWithImpl<$Res,
+        _$ExampleFreezedStateShowBannerImpl>
+    implements _$$ExampleFreezedStateShowBannerImplCopyWith<$Res> {
+  __$$ExampleFreezedStateShowBannerImplCopyWithImpl(
+      _$ExampleFreezedStateShowBannerImpl _value,
+      $Res Function(_$ExampleFreezedStateShowBannerImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _ExampleFreezedStateShowBanner get _value =>
-      super._value as _ExampleFreezedStateShowBanner;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? names = freezed,
-    Object? message = freezed,
+    Object? names = null,
+    Object? message = null,
   }) {
-    return _then(_ExampleFreezedStateShowBanner(
-      names: names == freezed
-          ? _value.names
+    return _then(_$ExampleFreezedStateShowBannerImpl(
+      names: null == names
+          ? _value._names
           : names // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      message: message == freezed
+      message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
@@ -546,13 +520,20 @@ class __$ExampleFreezedStateShowBannerCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ExampleFreezedStateShowBanner
+class _$ExampleFreezedStateShowBannerImpl
     implements _ExampleFreezedStateShowBanner {
-  _$_ExampleFreezedStateShowBanner(
-      {required this.names, required this.message});
+  _$ExampleFreezedStateShowBannerImpl(
+      {required final List<String> names, required this.message})
+      : _names = names;
 
+  final List<String> _names;
   @override
-  final List<String> names;
+  List<String> get names {
+    if (_names is EqualUnmodifiableListView) return _names;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_names);
+  }
+
   @override
   final String message;
 
@@ -562,25 +543,25 @@ class _$_ExampleFreezedStateShowBanner
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ExampleFreezedStateShowBanner &&
-            const DeepCollectionEquality().equals(other.names, names) &&
-            const DeepCollectionEquality().equals(other.message, message));
+            other is _$ExampleFreezedStateShowBannerImpl &&
+            const DeepCollectionEquality().equals(other._names, _names) &&
+            (identical(other.message, message) || other.message == message));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(names),
-      const DeepCollectionEquality().hash(message));
+      runtimeType, const DeepCollectionEquality().hash(_names), message);
 
   @JsonKey(ignore: true)
   @override
-  _$ExampleFreezedStateShowBannerCopyWith<_ExampleFreezedStateShowBanner>
-      get copyWith => __$ExampleFreezedStateShowBannerCopyWithImpl<
-          _ExampleFreezedStateShowBanner>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ExampleFreezedStateShowBannerImplCopyWith<
+          _$ExampleFreezedStateShowBannerImpl>
+      get copyWith => __$$ExampleFreezedStateShowBannerImplCopyWithImpl<
+          _$ExampleFreezedStateShowBannerImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -596,10 +577,10 @@ class _$_ExampleFreezedStateShowBanner
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(List<String> names)? data,
-    TResult Function()? loading,
-    TResult Function(List<String> names, String message)? showBanner,
+    TResult? Function()? initial,
+    TResult? Function(List<String> names)? data,
+    TResult? Function()? loading,
+    TResult? Function(List<String> names, String message)? showBanner,
   }) {
     return showBanner?.call(names, message);
   }
@@ -633,10 +614,10 @@ class _$_ExampleFreezedStateShowBanner
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_ExampleFreezedStateInitial value)? initial,
-    TResult Function(_ExampleFreezedStateData value)? data,
-    TResult Function(_ExampleFreezedStateLoading value)? loading,
-    TResult Function(_ExampleFreezedStateShowBanner value)? showBanner,
+    TResult? Function(_ExampleFreezedStateInitial value)? initial,
+    TResult? Function(_ExampleFreezedStateData value)? data,
+    TResult? Function(_ExampleFreezedStateLoading value)? loading,
+    TResult? Function(_ExampleFreezedStateShowBanner value)? showBanner,
   }) {
     return showBanner?.call(this);
   }
@@ -659,39 +640,16 @@ class _$_ExampleFreezedStateShowBanner
 
 abstract class _ExampleFreezedStateShowBanner implements ExampleFreezedState {
   factory _ExampleFreezedStateShowBanner(
-      {required List<String> names,
-      required String message}) = _$_ExampleFreezedStateShowBanner;
+      {required final List<String> names,
+      required final String message}) = _$ExampleFreezedStateShowBannerImpl;
 
   List<String> get names;
   String get message;
   @JsonKey(ignore: true)
-  _$ExampleFreezedStateShowBannerCopyWith<_ExampleFreezedStateShowBanner>
+  _$$ExampleFreezedStateShowBannerImplCopyWith<
+          _$ExampleFreezedStateShowBannerImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
-
-/// @nodoc
-class _$ExampleFreezedEventTearOff {
-  const _$ExampleFreezedEventTearOff();
-
-  _ExampleFreezedEventFindNames findNames() {
-    return const _ExampleFreezedEventFindNames();
-  }
-
-  _ExampleFreezedEventAddName addName({required String name}) {
-    return _ExampleFreezedEventAddName(
-      name: name,
-    );
-  }
-
-  _ExampleFreezedEventRemoveName removeName(String name) {
-    return _ExampleFreezedEventRemoveName(
-      name,
-    );
-  }
-}
-
-/// @nodoc
-const $ExampleFreezedEvent = _$ExampleFreezedEventTearOff();
 
 /// @nodoc
 mixin _$ExampleFreezedEvent {
@@ -704,9 +662,9 @@ mixin _$ExampleFreezedEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? findNames,
-    TResult Function(String name)? addName,
-    TResult Function(String name)? removeName,
+    TResult? Function()? findNames,
+    TResult? Function(String name)? addName,
+    TResult? Function(String name)? removeName,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -726,9 +684,9 @@ mixin _$ExampleFreezedEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_ExampleFreezedEventFindNames value)? findNames,
-    TResult Function(_ExampleFreezedEventAddName value)? addName,
-    TResult Function(_ExampleFreezedEventRemoveName value)? removeName,
+    TResult? Function(_ExampleFreezedEventFindNames value)? findNames,
+    TResult? Function(_ExampleFreezedEventAddName value)? addName,
+    TResult? Function(_ExampleFreezedEventRemoveName value)? removeName,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -745,45 +703,44 @@ mixin _$ExampleFreezedEvent {
 abstract class $ExampleFreezedEventCopyWith<$Res> {
   factory $ExampleFreezedEventCopyWith(
           ExampleFreezedEvent value, $Res Function(ExampleFreezedEvent) then) =
-      _$ExampleFreezedEventCopyWithImpl<$Res>;
+      _$ExampleFreezedEventCopyWithImpl<$Res, ExampleFreezedEvent>;
 }
 
 /// @nodoc
-class _$ExampleFreezedEventCopyWithImpl<$Res>
+class _$ExampleFreezedEventCopyWithImpl<$Res, $Val extends ExampleFreezedEvent>
     implements $ExampleFreezedEventCopyWith<$Res> {
   _$ExampleFreezedEventCopyWithImpl(this._value, this._then);
 
-  final ExampleFreezedEvent _value;
   // ignore: unused_field
-  final $Res Function(ExampleFreezedEvent) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$ExampleFreezedEventFindNamesCopyWith<$Res> {
-  factory _$ExampleFreezedEventFindNamesCopyWith(
-          _ExampleFreezedEventFindNames value,
-          $Res Function(_ExampleFreezedEventFindNames) then) =
-      __$ExampleFreezedEventFindNamesCopyWithImpl<$Res>;
+abstract class _$$ExampleFreezedEventFindNamesImplCopyWith<$Res> {
+  factory _$$ExampleFreezedEventFindNamesImplCopyWith(
+          _$ExampleFreezedEventFindNamesImpl value,
+          $Res Function(_$ExampleFreezedEventFindNamesImpl) then) =
+      __$$ExampleFreezedEventFindNamesImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$ExampleFreezedEventFindNamesCopyWithImpl<$Res>
-    extends _$ExampleFreezedEventCopyWithImpl<$Res>
-    implements _$ExampleFreezedEventFindNamesCopyWith<$Res> {
-  __$ExampleFreezedEventFindNamesCopyWithImpl(
-      _ExampleFreezedEventFindNames _value,
-      $Res Function(_ExampleFreezedEventFindNames) _then)
-      : super(_value, (v) => _then(v as _ExampleFreezedEventFindNames));
-
-  @override
-  _ExampleFreezedEventFindNames get _value =>
-      super._value as _ExampleFreezedEventFindNames;
+class __$$ExampleFreezedEventFindNamesImplCopyWithImpl<$Res>
+    extends _$ExampleFreezedEventCopyWithImpl<$Res,
+        _$ExampleFreezedEventFindNamesImpl>
+    implements _$$ExampleFreezedEventFindNamesImplCopyWith<$Res> {
+  __$$ExampleFreezedEventFindNamesImplCopyWithImpl(
+      _$ExampleFreezedEventFindNamesImpl _value,
+      $Res Function(_$ExampleFreezedEventFindNamesImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_ExampleFreezedEventFindNames implements _ExampleFreezedEventFindNames {
-  const _$_ExampleFreezedEventFindNames();
+class _$ExampleFreezedEventFindNamesImpl
+    implements _ExampleFreezedEventFindNames {
+  const _$ExampleFreezedEventFindNamesImpl();
 
   @override
   String toString() {
@@ -791,10 +748,10 @@ class _$_ExampleFreezedEventFindNames implements _ExampleFreezedEventFindNames {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ExampleFreezedEventFindNames);
+            other is _$ExampleFreezedEventFindNamesImpl);
   }
 
   @override
@@ -813,9 +770,9 @@ class _$_ExampleFreezedEventFindNames implements _ExampleFreezedEventFindNames {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? findNames,
-    TResult Function(String name)? addName,
-    TResult Function(String name)? removeName,
+    TResult? Function()? findNames,
+    TResult? Function(String name)? addName,
+    TResult? Function(String name)? removeName,
   }) {
     return findNames?.call();
   }
@@ -847,9 +804,9 @@ class _$_ExampleFreezedEventFindNames implements _ExampleFreezedEventFindNames {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_ExampleFreezedEventFindNames value)? findNames,
-    TResult Function(_ExampleFreezedEventAddName value)? addName,
-    TResult Function(_ExampleFreezedEventRemoveName value)? removeName,
+    TResult? Function(_ExampleFreezedEventFindNames value)? findNames,
+    TResult? Function(_ExampleFreezedEventAddName value)? addName,
+    TResult? Function(_ExampleFreezedEventRemoveName value)? removeName,
   }) {
     return findNames?.call(this);
   }
@@ -871,36 +828,36 @@ class _$_ExampleFreezedEventFindNames implements _ExampleFreezedEventFindNames {
 
 abstract class _ExampleFreezedEventFindNames implements ExampleFreezedEvent {
   const factory _ExampleFreezedEventFindNames() =
-      _$_ExampleFreezedEventFindNames;
+      _$ExampleFreezedEventFindNamesImpl;
 }
 
 /// @nodoc
-abstract class _$ExampleFreezedEventAddNameCopyWith<$Res> {
-  factory _$ExampleFreezedEventAddNameCopyWith(
-          _ExampleFreezedEventAddName value,
-          $Res Function(_ExampleFreezedEventAddName) then) =
-      __$ExampleFreezedEventAddNameCopyWithImpl<$Res>;
+abstract class _$$ExampleFreezedEventAddNameImplCopyWith<$Res> {
+  factory _$$ExampleFreezedEventAddNameImplCopyWith(
+          _$ExampleFreezedEventAddNameImpl value,
+          $Res Function(_$ExampleFreezedEventAddNameImpl) then) =
+      __$$ExampleFreezedEventAddNameImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({String name});
 }
 
 /// @nodoc
-class __$ExampleFreezedEventAddNameCopyWithImpl<$Res>
-    extends _$ExampleFreezedEventCopyWithImpl<$Res>
-    implements _$ExampleFreezedEventAddNameCopyWith<$Res> {
-  __$ExampleFreezedEventAddNameCopyWithImpl(_ExampleFreezedEventAddName _value,
-      $Res Function(_ExampleFreezedEventAddName) _then)
-      : super(_value, (v) => _then(v as _ExampleFreezedEventAddName));
+class __$$ExampleFreezedEventAddNameImplCopyWithImpl<$Res>
+    extends _$ExampleFreezedEventCopyWithImpl<$Res,
+        _$ExampleFreezedEventAddNameImpl>
+    implements _$$ExampleFreezedEventAddNameImplCopyWith<$Res> {
+  __$$ExampleFreezedEventAddNameImplCopyWithImpl(
+      _$ExampleFreezedEventAddNameImpl _value,
+      $Res Function(_$ExampleFreezedEventAddNameImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _ExampleFreezedEventAddName get _value =>
-      super._value as _ExampleFreezedEventAddName;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
+    Object? name = null,
   }) {
-    return _then(_ExampleFreezedEventAddName(
-      name: name == freezed
+    return _then(_$ExampleFreezedEventAddNameImpl(
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
@@ -910,8 +867,8 @@ class __$ExampleFreezedEventAddNameCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ExampleFreezedEventAddName implements _ExampleFreezedEventAddName {
-  const _$_ExampleFreezedEventAddName({required this.name});
+class _$ExampleFreezedEventAddNameImpl implements _ExampleFreezedEventAddName {
+  const _$ExampleFreezedEventAddNameImpl({required this.name});
 
   @override
   final String name;
@@ -922,22 +879,22 @@ class _$_ExampleFreezedEventAddName implements _ExampleFreezedEventAddName {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ExampleFreezedEventAddName &&
-            const DeepCollectionEquality().equals(other.name, name));
+            other is _$ExampleFreezedEventAddNameImpl &&
+            (identical(other.name, name) || other.name == name));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(name));
+  int get hashCode => Object.hash(runtimeType, name);
 
   @JsonKey(ignore: true)
   @override
-  _$ExampleFreezedEventAddNameCopyWith<_ExampleFreezedEventAddName>
-      get copyWith => __$ExampleFreezedEventAddNameCopyWithImpl<
-          _ExampleFreezedEventAddName>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ExampleFreezedEventAddNameImplCopyWith<_$ExampleFreezedEventAddNameImpl>
+      get copyWith => __$$ExampleFreezedEventAddNameImplCopyWithImpl<
+          _$ExampleFreezedEventAddNameImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -952,9 +909,9 @@ class _$_ExampleFreezedEventAddName implements _ExampleFreezedEventAddName {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? findNames,
-    TResult Function(String name)? addName,
-    TResult Function(String name)? removeName,
+    TResult? Function()? findNames,
+    TResult? Function(String name)? addName,
+    TResult? Function(String name)? removeName,
   }) {
     return addName?.call(name);
   }
@@ -986,9 +943,9 @@ class _$_ExampleFreezedEventAddName implements _ExampleFreezedEventAddName {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_ExampleFreezedEventFindNames value)? findNames,
-    TResult Function(_ExampleFreezedEventAddName value)? addName,
-    TResult Function(_ExampleFreezedEventRemoveName value)? removeName,
+    TResult? Function(_ExampleFreezedEventFindNames value)? findNames,
+    TResult? Function(_ExampleFreezedEventAddName value)? addName,
+    TResult? Function(_ExampleFreezedEventRemoveName value)? removeName,
   }) {
     return addName?.call(this);
   }
@@ -1009,43 +966,42 @@ class _$_ExampleFreezedEventAddName implements _ExampleFreezedEventAddName {
 }
 
 abstract class _ExampleFreezedEventAddName implements ExampleFreezedEvent {
-  const factory _ExampleFreezedEventAddName({required String name}) =
-      _$_ExampleFreezedEventAddName;
+  const factory _ExampleFreezedEventAddName({required final String name}) =
+      _$ExampleFreezedEventAddNameImpl;
 
   String get name;
   @JsonKey(ignore: true)
-  _$ExampleFreezedEventAddNameCopyWith<_ExampleFreezedEventAddName>
+  _$$ExampleFreezedEventAddNameImplCopyWith<_$ExampleFreezedEventAddNameImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$ExampleFreezedEventRemoveNameCopyWith<$Res> {
-  factory _$ExampleFreezedEventRemoveNameCopyWith(
-          _ExampleFreezedEventRemoveName value,
-          $Res Function(_ExampleFreezedEventRemoveName) then) =
-      __$ExampleFreezedEventRemoveNameCopyWithImpl<$Res>;
+abstract class _$$ExampleFreezedEventRemoveNameImplCopyWith<$Res> {
+  factory _$$ExampleFreezedEventRemoveNameImplCopyWith(
+          _$ExampleFreezedEventRemoveNameImpl value,
+          $Res Function(_$ExampleFreezedEventRemoveNameImpl) then) =
+      __$$ExampleFreezedEventRemoveNameImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({String name});
 }
 
 /// @nodoc
-class __$ExampleFreezedEventRemoveNameCopyWithImpl<$Res>
-    extends _$ExampleFreezedEventCopyWithImpl<$Res>
-    implements _$ExampleFreezedEventRemoveNameCopyWith<$Res> {
-  __$ExampleFreezedEventRemoveNameCopyWithImpl(
-      _ExampleFreezedEventRemoveName _value,
-      $Res Function(_ExampleFreezedEventRemoveName) _then)
-      : super(_value, (v) => _then(v as _ExampleFreezedEventRemoveName));
+class __$$ExampleFreezedEventRemoveNameImplCopyWithImpl<$Res>
+    extends _$ExampleFreezedEventCopyWithImpl<$Res,
+        _$ExampleFreezedEventRemoveNameImpl>
+    implements _$$ExampleFreezedEventRemoveNameImplCopyWith<$Res> {
+  __$$ExampleFreezedEventRemoveNameImplCopyWithImpl(
+      _$ExampleFreezedEventRemoveNameImpl _value,
+      $Res Function(_$ExampleFreezedEventRemoveNameImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _ExampleFreezedEventRemoveName get _value =>
-      super._value as _ExampleFreezedEventRemoveName;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
+    Object? name = null,
   }) {
-    return _then(_ExampleFreezedEventRemoveName(
-      name == freezed
+    return _then(_$ExampleFreezedEventRemoveNameImpl(
+      null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1055,9 +1011,9 @@ class __$ExampleFreezedEventRemoveNameCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ExampleFreezedEventRemoveName
+class _$ExampleFreezedEventRemoveNameImpl
     implements _ExampleFreezedEventRemoveName {
-  const _$_ExampleFreezedEventRemoveName(this.name);
+  const _$ExampleFreezedEventRemoveNameImpl(this.name);
 
   @override
   final String name;
@@ -1068,22 +1024,23 @@ class _$_ExampleFreezedEventRemoveName
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ExampleFreezedEventRemoveName &&
-            const DeepCollectionEquality().equals(other.name, name));
+            other is _$ExampleFreezedEventRemoveNameImpl &&
+            (identical(other.name, name) || other.name == name));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(name));
+  int get hashCode => Object.hash(runtimeType, name);
 
   @JsonKey(ignore: true)
   @override
-  _$ExampleFreezedEventRemoveNameCopyWith<_ExampleFreezedEventRemoveName>
-      get copyWith => __$ExampleFreezedEventRemoveNameCopyWithImpl<
-          _ExampleFreezedEventRemoveName>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ExampleFreezedEventRemoveNameImplCopyWith<
+          _$ExampleFreezedEventRemoveNameImpl>
+      get copyWith => __$$ExampleFreezedEventRemoveNameImplCopyWithImpl<
+          _$ExampleFreezedEventRemoveNameImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1098,9 +1055,9 @@ class _$_ExampleFreezedEventRemoveName
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? findNames,
-    TResult Function(String name)? addName,
-    TResult Function(String name)? removeName,
+    TResult? Function()? findNames,
+    TResult? Function(String name)? addName,
+    TResult? Function(String name)? removeName,
   }) {
     return removeName?.call(name);
   }
@@ -1132,9 +1089,9 @@ class _$_ExampleFreezedEventRemoveName
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_ExampleFreezedEventFindNames value)? findNames,
-    TResult Function(_ExampleFreezedEventAddName value)? addName,
-    TResult Function(_ExampleFreezedEventRemoveName value)? removeName,
+    TResult? Function(_ExampleFreezedEventFindNames value)? findNames,
+    TResult? Function(_ExampleFreezedEventAddName value)? addName,
+    TResult? Function(_ExampleFreezedEventRemoveName value)? removeName,
   }) {
     return removeName?.call(this);
   }
@@ -1155,11 +1112,12 @@ class _$_ExampleFreezedEventRemoveName
 }
 
 abstract class _ExampleFreezedEventRemoveName implements ExampleFreezedEvent {
-  const factory _ExampleFreezedEventRemoveName(String name) =
-      _$_ExampleFreezedEventRemoveName;
+  const factory _ExampleFreezedEventRemoveName(final String name) =
+      _$ExampleFreezedEventRemoveNameImpl;
 
   String get name;
   @JsonKey(ignore: true)
-  _$ExampleFreezedEventRemoveNameCopyWith<_ExampleFreezedEventRemoveName>
+  _$$ExampleFreezedEventRemoveNameImplCopyWith<
+          _$ExampleFreezedEventRemoveNameImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

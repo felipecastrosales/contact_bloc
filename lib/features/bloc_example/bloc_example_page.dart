@@ -7,7 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'bloc/example_bloc.dart';
 
 class BlocExamplePage extends StatelessWidget {
-  const BlocExamplePage({Key? key}) : super(key: key);
+  const BlocExamplePage({super.key});
 
   @override
   Widget build(BuildContext context) {

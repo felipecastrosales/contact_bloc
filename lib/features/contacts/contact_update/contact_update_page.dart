@@ -8,9 +8,9 @@ import 'package:contact_bloc/widgets/loader.dart';
 class ContactUpdatePage extends StatefulWidget {
   final Contact contact;
   const ContactUpdatePage({
-    Key? key,
+    super.key,
     required this.contact,
-  }) : super(key: key);
+  });
 
   @override
   State<ContactUpdatePage> createState() => _ContactUpdatePageState();
